@@ -23,7 +23,7 @@ body {
 }
 
 .profile-photo {
-  width: 190px;
+  width: 360px;
   max-width: 100%;
 }
 
@@ -92,8 +92,8 @@ body {
 
 .hero {
   display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 32px;
+  grid-template-columns: 360px 1fr;
+  gap: 42px;
   align-items: start;
 }
 
@@ -112,11 +112,14 @@ body {
   font-size: 0.9rem;
 }
 
+.profile-photo .headshot,
 .profile-photo img {
-  width: 180px;
-  height: 220px;
+  width: 360px !important;
+  height: 470px !important;
   object-fit: cover;
+  object-position: center top;
   border: 1px solid var(--border);
+  border-radius: 4px;
   display: block;
 }
 
@@ -215,25 +218,97 @@ a {
   color: #334155;
 }
 
-@media (max-width: 760px) {
-  body {
-    font-size: 16px;
-  }
-
+@media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
   }
 
-  .profile-placeholder {
-    width: 160px;
-    height: 200px;
+  .profile-photo,
+  .profile-photo .headshot,
+  .profile-photo img {
+    width: 320px !important;
+    max-width: 100%;
   }
 
-  .project-grid {
+  .profile-photo .headshot,
+  .profile-photo img {
+    height: 420px !important;
+  }
+}
+
+.profile-sidebar {
+  width: 360px;
+  max-width: 100%;
+}
+
+.profile-photo {
+  width: 360px;
+  max-width: 100%;
+}
+
+.profile-photo .headshot,
+.profile-photo img {
+  width: 360px !important;
+  height: 470px !important;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  display: block;
+}
+
+.profile-icons {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.profile-icons a {
+  color: #7a0026;
+  font-size: 1.45rem;
+  text-decoration: none;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.profile-icons a:hover {
+  color: #1f5fbf;
+  transform: translateY(-2px);
+}
+
+.sidebar-line {
+  margin-top: 18px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.sidebar-line a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 46px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .hero {
     grid-template-columns: 1fr;
   }
 
-  .name {
-    font-size: 1.7rem;
+  .profile-sidebar,
+  .profile-photo,
+  .profile-photo .headshot,
+  .profile-photo img {
+    width: 320px !important;
+    max-width: 100%;
+  }
+
+  .profile-photo .headshot,
+  .profile-photo img {
+    height: 420px !important;
   }
 }
