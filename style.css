@@ -97,6 +97,14 @@ body {
   font-size: 0.9rem;
 }
 
+.profile-photo img {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  display: block;
+}
+
 h1, h2, h3 {
   line-height: 1.25;
   color: #111827;
